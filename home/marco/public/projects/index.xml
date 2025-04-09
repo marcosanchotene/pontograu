@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on pontograu</title>
+    <link>http://pontograu.com/projects/</link>
+    <description>Recent content in Projects on pontograu</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://pontograu.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anyver</title>
+      <link>http://pontograu.com/projects/anyver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pontograu.com/projects/anyver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CDX vs CDX</title>
+      <link>http://pontograu.com/projects/cdx-vs-cdx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pontograu.com/projects/cdx-vs-cdx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CDX vs CDX on the web</title>
+      <link>http://pontograu.com/projects/cdx-vs-cdx-web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pontograu.com/projects/cdx-vs-cdx-web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pytest-json-fixtures</title>
+      <link>http://pontograu.com/projects/pytest-json-fixtures/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://pontograu.com/projects/pytest-json-fixtures/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

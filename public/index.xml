@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pontograu</title>
+    <link>//pontograu.com/</link>
+    <description>Recent content on pontograu</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="//pontograu.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anyver</title>
+      <link>//pontograu.com/projects/anyver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//pontograu.com/projects/anyver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CDX vs CDX</title>
+      <link>//pontograu.com/projects/cdx-vs-cdx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//pontograu.com/projects/cdx-vs-cdx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CDX vs CDX on the web</title>
+      <link>//pontograu.com/projects/cdx-vs-cdx-web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//pontograu.com/projects/cdx-vs-cdx-web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pytest-json-fixtures</title>
+      <link>//pontograu.com/projects/pytest-json-fixtures/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//pontograu.com/projects/pytest-json-fixtures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Surprise Surprise</title>
+      <link>//pontograu.com/articles/article/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//pontograu.com/articles/article/</guid>
+      <description>Thank you for your support! Hello. If you like this template, I&amp;rsquo;d be happy to get a coffee donation :)
+  </description>
+    </item>
+    
+  </channel>
+</rss>
