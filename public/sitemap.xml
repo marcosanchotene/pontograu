@@ -2,26 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//pontograu.com/projects/anyver/</loc>
+    <loc>//localhost:1313/projects/anyver/</loc>
   </url><url>
-    <loc>//pontograu.com/articles/</loc>
+    <loc>//localhost:1313/articles/</loc>
   </url><url>
-    <loc>//pontograu.com/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>//pontograu.com/projects/cdx-vs-cdx/</loc>
+    <loc>//localhost:1313/projects/cdx-vs-cdx/</loc>
   </url><url>
-    <loc>//pontograu.com/projects/cdx-vs-cdx-web/</loc>
+    <loc>//localhost:1313/projects/cdx-vs-cdx-web/</loc>
   </url><url>
-    <loc>//pontograu.com/contact/</loc>
+    <loc>//localhost:1313/contact/</loc>
   </url><url>
-    <loc>//pontograu.com/</loc>
+    <loc>//localhost:1313/</loc>
   </url><url>
-    <loc>//pontograu.com/projects/</loc>
+    <loc>//localhost:1313/projects/</loc>
   </url><url>
-    <loc>//pontograu.com/projects/pytest-json-fixtures/</loc>
+    <loc>//localhost:1313/projects/pytest-json-fixtures/</loc>
   </url><url>
-    <loc>//pontograu.com/articles/article/</loc>
+    <loc>//localhost:1313/articles/article/</loc>
   </url><url>
-    <loc>//pontograu.com/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>
