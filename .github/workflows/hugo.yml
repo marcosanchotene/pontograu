@@ -61,7 +61,7 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: List public folder
-        run:
+        run: |
           ls public
           ls public/projects
       - name: Upload artifact
