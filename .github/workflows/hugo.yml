@@ -63,6 +63,7 @@ jobs:
       - name: List public folder
         run:
           ls public
+          ls public/projects
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
