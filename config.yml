@@ -25,13 +25,13 @@ params:
 
 
     defaultTheme: auto
-    # disableThemeToggle: true
+    disableThemeToggle: true
     ShowShareButtons: true
-    # ShowReadingTime: true
+    ShowReadingTime: false
     displayFullLangName: true
-    ShowBreadCrumbs: true
+    ShowBreadCrumbs: false
     ShowCodeCopyButtons: true
-    ShowToc: true
+    ShowToc: false
 
     profileMode:
         # Disable to populate home page with 'mainSections' content
