@@ -49,7 +49,9 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Delete public folder
-        run: rm -rf public
+        run: |
+          ls -l
+          rm -rf public
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
@@ -58,6 +60,9 @@ jobs:
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: List public folder
+        run:
+          ls public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
