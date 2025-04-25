@@ -64,6 +64,8 @@ jobs:
         run: |
           ls public
           ls public/projects
+      - name: Remove default project
+        run: rm -rf public/projects/math-brain-trainer
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
