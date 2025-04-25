@@ -88,3 +88,6 @@ pygmentsUseClasses: true
 
 minify:
     disableXML: true
+
+ignoreFiles:
+  - "themes/charlolamode/content/.*"
