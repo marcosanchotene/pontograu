@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ site.LanguageCode | default "en-us" }}">
+<head>
+  {{ partial "minimal_head.html" . }}
+</head>
+<body>
+  <main class="shell shell-list">
+    <header class="list-header">
+      <p class="eyebrow"><a href="{{ "/" | relURL }}">{{ site.Title }}</a></p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Content }}
+      <div class="list-description">{{ . }}</div>
+      {{ end }}
+    </header>
+
+    <section class="projects-grid" aria-label="Items">
+      {{ $pages := .Pages.ByDate.Reverse }}
+      {{ if gt (len $pages) 0 }}
+      {{ range $pages }}
+      <article class="project-card">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Params.description }}
+        <p>{{ . }}</p>
+        {{ else }}
+        <p>{{ .Summary }}</p>
+        {{ end }}
+      </article>
+      {{ end }}
+      {{ else }}
+      <p>No content available yet.</p>
+      {{ end }}
+    </section>
+  </main>
+</body>
+</html>

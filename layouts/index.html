@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="{{ site.LanguageCode | default "en-us" }}">
+<head>
+  {{ partial "minimal_head.html" . }}
+</head>
+<body>
+  <main class="shell">
+    <section class="hero" aria-label="Profile">
+      {{ with site.Params.profile.image }}
+      <img
+        class="avatar"
+        src="{{ . | relURL }}"
+        alt="{{ site.Params.profile.name | default site.Title }}"
+        width="168"
+        height="168"
+      />
+      {{ end }}
+
+      <h1 class="name">{{ site.Params.profile.name | default site.Title }}</h1>
+
+      {{ with site.Params.profile.bio }}
+      <p class="bio">{{ . }}</p>
+      {{ end }}
+
+      {{ with site.Params.socials }}
+      <ul class="social-list" aria-label="Social links">
+        {{ range . }}
+        <li>
+          <a
+            class="social-link"
+            href="{{ .url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="{{ .name | title }}"
+          >
+            <span class="social-icon">{{ partial "social_icon.html" . }}</span>
+            <span>{{ .name | title }}</span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+
+      <p class="hero-cta">
+        <a href="{{ "projects/" | relURL }}">View projects</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
