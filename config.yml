@@ -1,7 +1,6 @@
 baseURL: https://marcosanchotene.github.io
 title: pontograu
 languageCode: en-us
-theme: charlolamode
 pagination:
   pagerSize: 8
 
@@ -53,6 +52,3 @@ pygmentsUseClasses: true
 
 minify:
   disableXML: true
-
-ignoreFiles:
-  - themes/charlolamode/content/.*

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="{{ site.LanguageCode | default "en-us" }}">
+<head>
+  {{ partial "minimal_head.html" . }}
+</head>
+<body>
+  <main class="shell shell-content">
+    <header class="list-header">
+      <p class="eyebrow"><a href="{{ "/" | relURL }}">{{ site.Title }}</a></p>
+      <h1>{{ .Title }}</h1>
+    </header>
+
+    <article class="content-body">
+      {{ .Content }}
+    </article>
+  </main>
+</body>
+</html>
