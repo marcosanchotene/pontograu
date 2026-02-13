@@ -1,5 +1,5 @@
-baseURL: https://marcosanchotene.github.io
-title: pontograu
+baseURL: https://example.com
+title: Your Name
 languageCode: en-us
 theme: charlolamode
 pagination:
@@ -12,33 +12,28 @@ menu:
       weight: 10
 
 params:
-  author: Marco Sanchotene
+  author: Your Name
 
-  # Homepage profile block.
   profile:
-    name: Marco Sanchotene
+    name: Your Name
     bio: >-
-      Software Developer in Test building practical developer tooling,
-      quality pipelines, and automation with a product mindset.
+      Short punchy bio about your role and focus.
     image: /images/profile.png
 
-  # Social links rendered on homepage.
   socials:
     - name: github
-      url: https://github.com/marcosanchotene
+      url: https://github.com/your-handle
     - name: linkedin
-      url: https://www.linkedin.com/in/marco-sanchotene-a8674516
+      url: https://linkedin.com/in/your-handle
     - name: stackoverflow
-      url: https://stackoverflow.com/users/5489111/marco-s
+      url: https://stackoverflow.com/users/your-id
     - name: buymeacoffee
-      url: https://www.buymeacoffee.com/m.sanchotene
+      url: https://buymeacoffee.com/your-handle
 
-  # Optional labels used by list templates.
   projects:
     heading: Selected Projects
     emptyState: No projects published yet.
 
-  # Favicon assets.
   assets:
     favicon: /images/favicon.ico
     favicon16x16: /images/favicon-16x16.png
@@ -53,6 +48,3 @@ pygmentsUseClasses: true
 
 minify:
   disableXML: true
-
-ignoreFiles:
-  - themes/charlolamode/content/.*

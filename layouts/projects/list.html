@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="{{ site.LanguageCode | default "en-us" }}">
+<head>
+  {{ partial "minimal_head.html" . }}
+</head>
+<body>
+  <main class="shell shell-list">
+    <header class="list-header">
+      <p class="eyebrow"><a href="{{ "/" | relURL }}">{{ site.Title }}</a></p>
+      <h1>{{ with site.Params.projects.heading }}{{ . }}{{ else }}{{ .Title }}{{ end }}</h1>
+      {{ with .Content }}
+      <div class="list-description">{{ . }}</div>
+      {{ end }}
+    </header>
+
+    <section class="projects-grid" aria-label="Projects">
+      {{ $pages := .Pages.ByTitle }}
+      {{ if gt (len $pages) 0 }}
+      {{ range $pages }}
+      {{ $projectUrl := .Params.link | default .Params.repo | default .Params.live | default .RelPermalink }}
+      <article class="project-card">
+        <h2><a href="{{ $projectUrl }}" target="_blank" rel="noopener noreferrer">{{ .Title }}</a></h2>
+        {{ with .Params.description }}
+        <p>{{ . }}</p>
+        {{ end }}
+      </article>
+      {{ end }}
+      {{ else }}
+      <p>{{ site.Params.projects.emptyState | default "No projects published yet." }}</p>
+      {{ end }}
+    </section>
+  </main>
+</body>
+</html>
