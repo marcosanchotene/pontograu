@@ -1,6 +1,8 @@
 baseURL: https://marcosanchotene.github.io
 title: pontograu
-languageCode: en-us
+languages:
+  en:
+    locale: en-US
 pagination:
   pagerSize: 8
 
