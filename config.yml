@@ -14,6 +14,9 @@ menu:
     - name: Agente WhatsApp
       url: /agente-whatsapp/
       weight: 20
+    - name: Contato
+      url: /contato/
+      weight: 30
 
 params:
   author: Ponto Grau
