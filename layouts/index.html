@@ -4,47 +4,54 @@
   {{ partial "minimal_head.html" . }}
 </head>
 <body>
+  <nav class="site-nav">
+    <a class="nav-home" href="{{ "/" | relURL }}">{{ site.Params.company.name | default site.Title }}</a>
+    <ul class="nav-links">
+      {{ range site.Menus.main }}
+      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+
   <main class="shell">
-    <section class="hero" aria-label="Profile">
-      {{ with site.Params.profile.image }}
-      <img
-        class="avatar"
-        src="{{ . | relURL }}"
-        alt="{{ site.Params.profile.name | default site.Title }}"
-        width="168"
-        height="168"
-      />
+
+    <section class="landing-hero" aria-label="Apresentação">
+      {{ with site.Params.company.logo }}
+      <img class="company-logo" src="{{ . | relURL }}" alt="{{ site.Params.company.name | default site.Title }}" />
       {{ end }}
-
-      <h1 class="name">{{ site.Params.profile.name | default site.Title }}</h1>
-
-      {{ with site.Params.profile.bio }}
-      <p class="bio">{{ . }}</p>
+      <h1 class="company-name">{{ site.Params.company.name | default site.Title }}</h1>
+      {{ with site.Params.company.tagline }}
+      <p class="company-tagline">{{ . }}</p>
       {{ end }}
-
-      {{ with site.Params.socials }}
-      <ul class="social-list" aria-label="Social links">
-        {{ range . }}
-        <li>
-          <a
-            class="social-link"
-            href="{{ .url }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="{{ .name | title }}"
-          >
-            <span class="social-icon">{{ partial "social_icon.html" . }}</span>
-            <span>{{ .name | title }}</span>
-          </a>
-        </li>
-        {{ end }}
-      </ul>
-      {{ end }}
-
-      <p class="hero-cta">
-        <a href="{{ "projects/" | relURL }}">View projects</a>
-      </p>
     </section>
+
+    <section class="services-section" aria-label="Serviços" id="services">
+      <h2 class="section-heading">O que fazemos</h2>
+      <div class="services-grid">
+
+        <article class="project-card service-card">
+          <h3>Testes de Software &amp; QA</h3>
+          <p>Pipelines de qualidade, suítes de testes automatizados e ferramentas para equipes de desenvolvimento. Seu software entregue com confiança.</p>
+        </article>
+
+        <article class="project-card service-card">
+          <h3>Agente WhatsApp com IA</h3>
+          <p>Agentes conversacionais inteligentes que respondem clientes, qualificam leads e automatizam fluxos diretamente no WhatsApp.</p>
+          <p class="card-cta"><a href="{{ "/agente-whatsapp/" | relURL }}">Saiba mais →</a></p>
+        </article>
+
+        <article class="project-card service-card">
+          <h3>Desenvolvimento de Apps Mobile</h3>
+          <p>Apps nativos para Android com foco em produto — do protótipo à Play Store. Veja o <a href="{{ "/fino/" | relURL }}">Fino</a>, nosso app de controle financeiro.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="landing-contact" aria-label="Contato">
+      <p>Entre em contato: <a href="mailto:marco@pontograu.com">marco@pontograu.com</a></p>
+    </section>
+
   </main>
 </body>
 </html>

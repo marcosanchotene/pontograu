@@ -1,7 +1,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.profile.bio }}{{ . }}{{ else }}Portfolio website{{ end }}{{ end }}" />
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.company.tagline }}{{ . }}{{ else }}Ponto Grau{{ end }}{{ end }}" />
 
 {{ with site.Params.assets.favicon }}
 <link rel="icon" href="{{ . | relURL }}" />
