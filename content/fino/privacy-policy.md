@@ -1,5 +1,7 @@
 ---
 title: Política de Privacidade — Fino
+aliases:
+  - /privacy-policy/
 ---
 
 *Fino · Ponto Grau · Atualizado em 08/05/2026*
