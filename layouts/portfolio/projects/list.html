@@ -6,8 +6,8 @@
 <body>
   <main class="shell shell-list">
     <header class="list-header">
-      <p class="eyebrow"><a href="{{ "/" | relURL }}">{{ site.Title }}</a></p>
-      <h1>{{ with site.Params.projects.heading }}{{ . }}{{ else }}{{ .Title }}{{ end }}</h1>
+      <p class="eyebrow"><a href="{{ "/portfolio/" | relURL }}">{{ site.Params.profile.name | default site.Title }}</a></p>
+      <h1>{{ .Title }}</h1>
       {{ with .Content }}
       <div class="list-description">{{ . }}</div>
       {{ end }}
@@ -26,7 +26,7 @@
       </article>
       {{ end }}
       {{ else }}
-      <p>{{ site.Params.projects.emptyState | default "No projects published yet." }}</p>
+      <p>No projects published yet.</p>
       {{ end }}
     </section>
   </main>
