@@ -56,16 +56,9 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
         run: |
-          ls content/projects/
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: List public folder
-        run: |
-          ls public
-          ls public/projects
-      - name: Remove default project
-        run: rm -rf public/projects/math-brain-trainer
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

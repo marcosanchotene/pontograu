@@ -1,5 +1,5 @@
-baseURL: https://marcosanchotene.github.io
-title: pontograu
+baseURL: https://pontograu.com
+title: Ponto Grau
 languages:
   en:
     locale: en-US
@@ -8,14 +8,23 @@ pagination:
 
 menu:
   main:
-    - name: Projects
-      url: /projects/
+    - name: Fino
+      url: /fino/
       weight: 10
+    - name: Agente WhatsApp
+      url: /agente-whatsapp/
+      weight: 20
 
 params:
-  author: Marco Sanchotene
+  author: Ponto Grau
 
-  # Homepage profile block.
+  # Company landing page block.
+  company:
+    name: Ponto Grau
+    tagline: Software que funciona. Qualidade em que você pode confiar.
+    logo: /images/ponto-grau-logo.png
+
+  # Portfolio profile block (used by layouts/portfolio/list.html).
   profile:
     name: Marco Sanchotene
     bio: >-
@@ -23,7 +32,7 @@ params:
       quality pipelines, and automation with a product mindset.
     image: /images/profile.png
 
-  # Social links rendered on homepage.
+  # Social links rendered on portfolio landing.
   socials:
     - name: github
       url: https://github.com/marcosanchotene
@@ -33,11 +42,6 @@ params:
       url: https://stackoverflow.com/users/5489111/marco-s
     - name: buymeacoffee
       url: https://www.buymeacoffee.com/m.sanchotene
-
-  # Optional labels used by list templates.
-  projects:
-    heading: Selected Projects
-    emptyState: No projects published yet.
 
   # Favicon assets.
   assets:
