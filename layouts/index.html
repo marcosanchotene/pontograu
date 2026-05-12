@@ -5,7 +5,6 @@
 </head>
 <body>
   <nav class="site-nav">
-    <a class="nav-home" href="{{ "/" | relURL }}">{{ site.Params.company.name | default site.Title }}</a>
     <ul class="nav-links">
       {{ range site.Menus.main }}
       <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
@@ -13,13 +12,12 @@
     </ul>
   </nav>
 
-  <main class="shell">
+  <main class="shell shell--landing">
 
     <section class="landing-hero" aria-label="Apresentação">
       {{ with site.Params.company.logo }}
       <img class="company-logo" src="{{ . | relURL }}" alt="{{ site.Params.company.name | default site.Title }}" />
       {{ end }}
-      <h1 class="company-name">{{ site.Params.company.name | default site.Title }}</h1>
       {{ with site.Params.company.tagline }}
       <p class="company-tagline">{{ . }}</p>
       {{ end }}
@@ -46,10 +44,6 @@
         </article>
 
       </div>
-    </section>
-
-    <section class="landing-contact" aria-label="Contato">
-      <p>Entre em contato: <a href="mailto:marco@pontograu.com">marco@pontograu.com</a></p>
     </section>
 
   </main>

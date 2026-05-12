@@ -24,7 +24,7 @@ params:
   # Company landing page block.
   company:
     name: Ponto Grau
-    tagline: Software que funciona. Qualidade em que você pode confiar.
+    tagline: Software com qualidade.
     logo: /images/ponto-grau-logo.png
 
   # Portfolio profile block (used by layouts/portfolio/list.html).

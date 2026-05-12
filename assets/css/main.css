@@ -227,16 +227,10 @@ a {
 .site-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: min(840px, 92vw);
   margin: 0 auto;
   padding: 1.5rem 0;
-}
-
-.nav-home {
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
 }
 
 .nav-links {
@@ -261,21 +255,20 @@ a {
 .landing-hero {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.75rem;
-  padding: 3rem 0 2rem;
+  padding: 0.5rem 0 2rem;
+}
+
+.shell--landing {
+  padding-top: 1.5rem;
 }
 
 .company-logo {
-  height: 48px;
-  width: auto;
-}
-
-.company-name {
-  margin: 0;
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .company-tagline {
@@ -283,6 +276,7 @@ a {
   color: var(--muted);
   font-size: 1.1rem;
   max-width: 52ch;
+  text-align: center;
 }
 
 .section-heading {
@@ -315,12 +309,3 @@ a {
   font-size: 0.92rem;
 }
 
-.landing-contact {
-  margin-top: 2.5rem;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.landing-contact a {
-  color: var(--fg);
-}
