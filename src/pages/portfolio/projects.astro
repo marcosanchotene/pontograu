@@ -1,0 +1,54 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const projects = [
+  {
+    title: "Anyver",
+    description: "A tool to set any binary from a list of binaries for global usage.",
+    link: "https://github.com/marcosanchotene/anyver",
+  },
+  {
+    title: "CDX vs CDX",
+    description: "GUI tool to compare two SBOMs in CycloneDX JSON format.",
+    link: "https://github.com/marcosanchotene/cdx-vs-cdx",
+  },
+  {
+    title: "Person Name Generator",
+    description: "A DevToys extension that generates random person names for testing purposes.",
+    link: "https://www.nuget.org/packages/PersonNameGenerator/",
+  },
+  {
+    title: "pytest-json-fixtures",
+    description:
+      "Plugin to convert into JSON format the output generated when running pytest with the --fixtures flag.",
+    link: "https://pypi.org/project/pytest-json-fixtures/",
+  },
+];
+---
+
+<Base lang="en" page="portfolio" title="Projects — Marco Sanchotene" description="Projects by Marco Sanchotene.">
+  <main class="mx-auto max-w-2xl px-6 py-24">
+    <p class="mb-2 text-sm">
+      <a href="/portfolio" class="text-muted transition-colors hover:text-fg">&larr; Marco Sanchotene</a>
+    </p>
+    <h1 class="mb-10 text-3xl font-semibold tracking-tight sm:text-4xl">Projects</h1>
+
+    <div>
+      {projects.map((project, i) => (
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group flex items-baseline gap-5 border-b border-line py-6 first:border-t"
+        >
+          <span class="font-mono text-xs text-subtle">{String(i + 1).padStart(2, "0")}</span>
+          <span class="flex-1">
+            <span class="mb-1 block text-lg font-semibold tracking-tight">{project.title}</span>
+            <span class="block leading-relaxed text-muted">{project.description}</span>
+          </span>
+          <span class="font-mono text-subtle transition-transform group-hover:translate-x-1">&rarr;</span>
+        </a>
+      ))}
+    </div>
+  </main>
+</Base>

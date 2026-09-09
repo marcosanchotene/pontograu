@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import SocialIcon from "../components/SocialIcon.astro";
 
 const profile = {
   name: "Marco Sanchotene",
@@ -7,34 +8,10 @@ const profile = {
 };
 
 const socials = [
-  { label: "GitHub", url: "https://github.com/marcosanchotene" },
-  { label: "LinkedIn", url: "https://www.linkedin.com/in/marco-sanchotene" },
-  { label: "Stack Overflow", url: "https://stackoverflow.com/users/5489111/marco-s" },
-  { label: "Buy Me a Coffee", url: "https://www.buymeacoffee.com/m.sanchotene" },
-];
-
-const projects = [
-  {
-    title: "Anyver",
-    description: "A tool to set any binary from a list of binaries for global usage.",
-    link: "https://github.com/marcosanchotene/anyver",
-  },
-  {
-    title: "CDX vs CDX",
-    description: "GUI tool to compare two SBOMs in CycloneDX JSON format.",
-    link: "https://github.com/marcosanchotene/cdx-vs-cdx",
-  },
-  {
-    title: "Person Name Generator",
-    description: "A DevToys extension that generates random person names for testing purposes.",
-    link: "https://www.nuget.org/packages/PersonNameGenerator/",
-  },
-  {
-    title: "pytest-json-fixtures",
-    description:
-      "Plugin to convert into JSON format the output generated when running pytest with the --fixtures flag.",
-    link: "https://pypi.org/project/pytest-json-fixtures/",
-  },
+  { name: "github" as const, label: "GitHub", url: "https://github.com/marcosanchotene" },
+  { name: "linkedin" as const, label: "LinkedIn", url: "https://www.linkedin.com/in/marco-sanchotene" },
+  { name: "stackoverflow" as const, label: "Stack Overflow", url: "https://stackoverflow.com/users/5489111/marco-s" },
+  { name: "buymeacoffee" as const, label: "Buy Me a Coffee", url: "https://www.buymeacoffee.com/m.sanchotene" },
 ];
 ---
 
@@ -47,7 +24,7 @@ const projects = [
       <div class="h-6 w-6 rounded-full bg-line sm:h-7 sm:w-7"></div>
     </div>
 
-    <main class="relative mx-auto flex max-w-2xl flex-col items-center gap-5 px-6 pb-16 pt-20 text-center sm:pt-28">
+    <main class="relative mx-auto flex max-w-2xl flex-col items-center gap-5 px-6 py-24 text-center sm:py-32">
       <img
         src="/images/profile.png"
         alt={profile.name}
@@ -60,38 +37,28 @@ const projects = [
 
       <p class="max-w-lg text-lg leading-relaxed text-muted">{profile.bio}</p>
 
-      <p class="font-mono text-xs tracking-[0.06em] text-subtle">
-        {socials.map((social, i) => (
-          <>
-            <a href={social.url} target="_blank" rel="noopener noreferrer" class="uppercase transition-colors hover:text-fg">
-              {social.label}
+      <ul class="mt-1 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        {socials.map((social) => (
+          <li>
+            <a
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-fg"
+            >
+              <SocialIcon name={social.name} />
+              <span>{social.label}</span>
             </a>
-            {i < socials.length - 1 && <span class="px-2">&middot;</span>}
-          </>
+          </li>
         ))}
-      </p>
+      </ul>
+
+      <a
+        href="/portfolio/projects"
+        class="mt-3 border-b border-fg pb-[3px] text-sm font-medium transition-colors hover:border-muted hover:text-muted"
+      >
+        View projects &rarr;
+      </a>
     </main>
-  </section>
-
-  <section aria-label="Projects" class="mx-auto max-w-2xl px-6 pb-24">
-    <h2 class="border-t border-line pt-8 font-mono text-xs uppercase tracking-[0.16em] text-subtle">Projects</h2>
-
-    <div>
-      {projects.map((project, i) => (
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group flex items-baseline gap-5 border-b border-line py-6"
-        >
-          <span class="font-mono text-xs text-subtle">{String(i + 1).padStart(2, "0")}</span>
-          <span class="flex-1">
-            <span class="mb-1 block text-lg font-semibold tracking-tight">{project.title}</span>
-            <span class="block leading-relaxed text-muted">{project.description}</span>
-          </span>
-          <span class="font-mono text-subtle transition-transform group-hover:translate-x-1">&rarr;</span>
-        </a>
-      ))}
-    </div>
   </section>
 </Base>
