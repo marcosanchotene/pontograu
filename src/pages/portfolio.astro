@@ -1,0 +1,88 @@
+---
+import Base from "../layouts/Base.astro";
+import SocialIcon from "../components/SocialIcon.astro";
+
+const profile = {
+  name: "Marco Sanchotene",
+  bio: "Software Developer in Test building practical developer tooling, quality pipelines, and automation with a product mindset.",
+};
+
+const socials: { name: "github" | "linkedin" | "stackoverflow" | "buymeacoffee"; url: string; label: string }[] = [
+  { name: "github", url: "https://github.com/marcosanchotene", label: "GitHub" },
+  { name: "linkedin", url: "https://www.linkedin.com/in/marco-sanchotene", label: "LinkedIn" },
+  { name: "stackoverflow", url: "https://stackoverflow.com/users/5489111/marco-s", label: "Stack Overflow" },
+  { name: "buymeacoffee", url: "https://www.buymeacoffee.com/m.sanchotene", label: "Buy Me a Coffee" },
+];
+
+const projects = [
+  {
+    title: "Anyver",
+    description: "A tool to set any binary from a list of binaries for global usage.",
+    link: "https://github.com/marcosanchotene/anyver",
+  },
+  {
+    title: "CDX vs CDX",
+    description: "GUI tool to compare two SBOMs in CycloneDX JSON format.",
+    link: "https://github.com/marcosanchotene/cdx-vs-cdx",
+  },
+  {
+    title: "Person Name Generator",
+    description: "A DevToys extension that generates random person names for testing purposes.",
+    link: "https://www.nuget.org/packages/PersonNameGenerator/",
+  },
+  {
+    title: "pytest-json-fixtures",
+    description:
+      "Plugin to convert into JSON format the output generated when running pytest with the --fixtures flag.",
+    link: "https://pypi.org/project/pytest-json-fixtures/",
+  },
+];
+---
+
+<Base lang="en" page="portfolio" title="Portfolio — Marco Sanchotene" description={profile.bio}>
+  <main class="mx-auto flex max-w-3xl flex-col items-center gap-4 px-6 pb-8 pt-20 text-center sm:pt-28">
+    <img
+      src="/images/profile.png"
+      alt={profile.name}
+      width="480"
+      height="464"
+      class="h-32 w-32 rounded-full border border-line object-cover sm:h-36 sm:w-36"
+    />
+
+    <h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">{profile.name}</h1>
+
+    <p class="max-w-xl text-lg leading-relaxed text-muted">{profile.bio}</p>
+
+    <ul class="mt-1 flex flex-wrap items-center justify-center gap-2.5">
+      {socials.map((social) => (
+        <li>
+          <a
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-full border border-line px-3.5 py-2 text-sm transition-colors hover:border-subtle hover:bg-surface"
+          >
+            <SocialIcon name={social.name} />
+            <span>{social.label}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+
+  <section aria-label="Projects" class="mx-auto max-w-3xl px-6 pb-24 pt-16">
+    <h2 class="mb-4 text-xs font-semibold uppercase tracking-[0.1em] text-subtle">Projects</h2>
+    <div class="grid gap-4 sm:grid-cols-2">
+      {projects.map((project) => (
+        <article class="rounded-[10px] border border-line bg-surface p-6 transition-colors hover:border-subtle">
+          <h3 class="mb-2 text-lg font-semibold tracking-tight">
+            <a href={project.link} target="_blank" rel="noopener noreferrer" class="hover:text-muted">
+              {project.title}
+            </a>
+          </h3>
+          <p class="leading-relaxed text-muted">{project.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>

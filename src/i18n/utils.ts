@@ -6,9 +6,10 @@ export function useTranslations(lang: Lang) {
   };
 }
 
-export type Page = "home" | "contact";
+export type Page = "home" | "contact" | "portfolio";
 
 export function pathFor(lang: Lang, page: Page): string {
   if (page === "home") return lang === "en" ? "/" : "/pt/";
-  return lang === "en" ? "/contact" : "/pt/contato";
+  if (page === "contact") return lang === "en" ? "/contact" : "/pt/contato";
+  return "/portfolio";
 }

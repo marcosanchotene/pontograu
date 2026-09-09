@@ -8,6 +8,7 @@ export default {
         muted: "#6b6b6b",
         subtle: "#a0a0a0",
         line: "#e6e6e6",
+        surface: "#f7f7f7",
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
