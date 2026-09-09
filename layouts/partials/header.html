@@ -1,0 +1,12 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-logo" href="{{ "/" | relURL }}">{{ site.Params.company.name | default site.Title }}</a>
+    <nav aria-label="Navegação principal">
+      <ul class="nav-links">
+        {{ range site.Menus.main }}
+        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

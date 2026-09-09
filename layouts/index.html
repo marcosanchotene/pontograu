@@ -4,13 +4,7 @@
   {{ partial "minimal_head.html" . }}
 </head>
 <body>
-  <nav class="site-nav">
-    <ul class="nav-links">
-      {{ range site.Menus.main }}
-      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-  </nav>
+  {{ partial "header.html" . }}
 
   <main class="shell shell--landing">
 
@@ -47,5 +41,7 @@
     </section>
 
   </main>
+
+  {{ partial "footer.html" . }}
 </body>
 </html>

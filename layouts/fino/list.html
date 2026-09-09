@@ -4,6 +4,8 @@
   {{ partial "minimal_head.html" . }}
 </head>
 <body>
+  {{ partial "header.html" . }}
+
   <main class="shell shell-content">
     <header class="list-header">
       <p class="eyebrow"><a href="{{ "/" | relURL }}">{{ site.Title }}</a></p>
@@ -14,5 +16,7 @@
       <p><a href="{{ "/fino/privacy-policy/" | relURL }}">Política de Privacidade →</a></p>
     </article>
   </main>
+
+  {{ partial "footer.html" . }}
 </body>
 </html>

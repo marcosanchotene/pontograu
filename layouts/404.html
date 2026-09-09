@@ -4,6 +4,8 @@
   {{ partial "minimal_head.html" . }}
 </head>
 <body>
+  {{ partial "header.html" . }}
+
   <main class="shell shell-content">
     <section class="hero">
       <h1 class="name">404</h1>
@@ -11,5 +13,7 @@
       <p class="hero-cta"><a href="{{ "/" | relURL }}">Go back home</a></p>
     </section>
   </main>
+
+  {{ partial "footer.html" . }}
 </body>
 </html>

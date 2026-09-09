@@ -1,0 +1,21 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <strong>{{ site.Params.company.name | default site.Title }}</strong>
+      {{ with site.Params.company.tagline }}
+      <p>{{ . }}</p>
+      {{ end }}
+    </div>
+    <nav class="footer-nav" aria-label="Links do rodapé">
+      <ul>
+        {{ range site.Menus.main }}
+        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© {{ now.Year }} {{ site.Params.company.name | default site.Title }}</span>
+    <span>Feito com Hugo</span>
+  </div>
+</footer>
