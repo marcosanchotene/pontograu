@@ -1,0 +1,48 @@
+---
+import { useTranslations, pathFor } from "../i18n/utils";
+import type { Lang } from "../i18n/ui";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const contactHref = pathFor(lang, "contact");
+---
+
+<section class="relative overflow-hidden">
+  <div
+    class="pointer-events-none absolute -right-24 -top-24 flex h-[280px] w-[280px] items-center justify-center rounded-full border border-line sm:-right-32 sm:-top-32 sm:h-[420px] sm:w-[420px] md:-right-44 md:-top-44 md:h-[560px] md:w-[560px]"
+    aria-hidden="true"
+  >
+    <div class="h-6 w-6 rounded-full bg-line sm:h-8 sm:w-8 md:h-9 md:w-9"></div>
+  </div>
+
+  <main class="relative mx-auto flex max-w-3xl flex-col items-center gap-6 px-6 pb-20 pt-20 text-center sm:pt-28 md:gap-7 md:pt-32">
+    <img
+      src="/images/ponto-grau-logo.png"
+      alt="Ponto Grau"
+      width="1408"
+      height="768"
+      class="w-48 sm:w-56 md:w-64"
+    />
+
+    <p class="font-mono text-xs uppercase tracking-[0.18em] text-subtle">{t("hero.eyebrow")}</p>
+
+    <h1 class="max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
+      {t("hero.headline")}
+    </h1>
+
+    <p class="max-w-xl text-lg leading-relaxed text-muted">
+      {t("hero.body")}
+    </p>
+
+    <a
+      href={contactHref}
+      class="mt-3 border-b border-fg pb-[3px] text-sm font-medium transition-colors hover:border-muted hover:text-muted"
+    >
+      {t("hero.cta")} →
+    </a>
+  </main>
+</section>

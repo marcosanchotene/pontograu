@@ -1,0 +1,44 @@
+---
+import { languages, type Lang } from "../i18n/ui";
+import { useTranslations, pathFor, type Page } from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+  page: Page;
+}
+
+const { lang, page } = Astro.props;
+const t = useTranslations(lang);
+const homeHref = pathFor(lang, "home");
+const contactHref = pathFor(lang, "contact");
+---
+
+<header class="border-b border-line">
+  <div class="mx-auto flex h-[88px] max-w-6xl items-center justify-between px-6 sm:px-10">
+    <a href={homeHref} class="font-mono text-sm font-medium tracking-[0.14em]">
+      PONTO&nbsp;·&nbsp;GRAU
+    </a>
+    <nav class="flex items-center gap-8 sm:gap-10">
+      <div class="flex items-center gap-3.5 font-mono text-xs tracking-[0.08em]">
+        {Object.entries(languages).map(([code, label]) => (
+          code === lang ? (
+            <span class="border-b border-fg pb-0.5 text-fg">{label}</span>
+          ) : (
+            <a href={pathFor(code as Lang, page)} class="text-subtle transition-colors hover:text-fg">
+              {label}
+            </a>
+          )
+        ))}
+      </div>
+      <a
+        href={contactHref}
+        class:list={[
+          "text-[15px] transition-colors",
+          page === "contact" ? "border-b border-fg pb-0.5 text-fg" : "text-muted hover:text-fg",
+        ]}
+      >
+        {t("nav.contact")}
+      </a>
+    </nav>
+  </div>
+</header>
